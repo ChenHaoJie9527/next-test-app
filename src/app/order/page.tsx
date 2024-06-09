@@ -80,7 +80,7 @@ export default function PageHome() {
               );
             }}
           />
-          <Button>{isPending ? 'Saving...': 'Save'}</Button>
+          <Button>{isPending ? "Saving..." : "Save"}</Button>
           {isError && <div>Error: {JSON.stringify(error.fieldErrors)}</div>}
           {isSuccess && <div>Success: {JSON.stringify(data)}</div>}
         </form>

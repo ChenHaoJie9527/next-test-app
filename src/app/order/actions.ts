@@ -6,7 +6,7 @@ export const printTextAction = createServerAction()
     z.object({
       name: z.string().min(5).max(10),
       age: z.string().min(1)
-    })
+    }),
   )
   .output(z.string())
   .handler(async ({ input }) => {
