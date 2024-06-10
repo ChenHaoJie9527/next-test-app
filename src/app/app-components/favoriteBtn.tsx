@@ -6,15 +6,20 @@ import HeartFilledIcon from "./heart-filled-icon";
 import HeartIcon from "./heart-icon";
 
 export default function FavoriteBtn() {
-  console.log('111111111111');
   const [isFavorite, setIsFavorite] = useState(false);
-  useEffect(() => {
-    const isFavoriteValue = localStorage.getItem("isFavorite") || 'not value';
-    console.log('isFavoriteValue =>', isFavoriteValue);
-  }, []);
+  let hasFagoted;
+  if (typeof window !== "undefined") {
+    hasFagoted = true;
+  }
+  // const isFavoriteValue = localStorage.getItem("isFavorite") || "not value";
+  // console.log("isFavoriteValue =>", isFavoriteValue);
   return (
     <Button className="bg-[#ffffff] hover:bg-[#ececec]">
       {isFavorite ? <HeartFilledIcon /> : <HeartIcon />}
+      {/* suppressHydrationWarning：消除水合报警 */}
+      {/* <div suppressHydrationWarning>当前页面是服务端预渲染嘛？{hasFagoted ? "Yes" : "Noe"}</div> */}
+      <div>当前页面是服务端预渲染嘛？{hasFagoted ? "Yes" : "Noe"}</div>
+
     </Button>
   );
 }
