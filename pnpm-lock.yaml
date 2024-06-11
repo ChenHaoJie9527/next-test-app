@@ -82,6 +82,9 @@ devDependencies:
   react-hook-form:
     specifier: ^7.51.5
     version: 7.51.5(react@18.3.1)
+  react-multi-carousel:
+    specifier: ^2.8.5
+    version: 2.8.5
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.4
@@ -2387,6 +2390,11 @@ packages:
 
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
+    dev: true
+
+  /react-multi-carousel@2.8.5:
+    resolution: {integrity: sha512-C5DAvJkfzR2JK9YixZ3oyF9x6R4LW6nzTpIXrl9Oujxi4uqP9SzVVCjl+JLM3tSdqdjAx/oWZK3dTVBSR73Q+w==}
+    engines: {node: '>=8'}
     dev: true
 
   /react@18.3.1:

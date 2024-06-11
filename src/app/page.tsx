@@ -1,8 +1,9 @@
 import ThemeProvider from "@/providers/theme-providers";
 import UpdateBtn from "./app-components/Update-btn";
 import Product from "./app-components/components";
-import FavoriteBtn from "./app-components/favoriteBtn";
+// import FavoriteBtn from "./app-components/favoriteBtn";
 import dynamic from "next/dynamic";
+import ReactCarousel from "./app-components/carousel";
 
 // 动态导入 不需要服务器进行预渲染组件
 const DynamicFavoriteBtn = dynamic(
@@ -19,9 +20,10 @@ export default function Home() {
       <ThemeProvider>
         <Product />
       </ThemeProvider>
-      <FavoriteBtn />
-      {/* <DynamicFavoriteBtn /> */}
+      {/* <FavoriteBtn /> */}
+      <DynamicFavoriteBtn />
       <UpdateBtn />
+      <ReactCarousel />
     </main>
   );
 }

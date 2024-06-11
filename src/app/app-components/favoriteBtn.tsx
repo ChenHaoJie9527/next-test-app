@@ -7,10 +7,6 @@ import HeartIcon from "./heart-icon";
 
 export default function FavoriteBtn() {
   const [isFavorite, setIsFavorite] = useState(false);
-  let hasFagoted;
-  if (typeof window !== "undefined") {
-    hasFagoted = true;
-  }
   // const isFavoriteValue = localStorage.getItem("isFavorite") || "not value";
   // console.log("isFavoriteValue =>", isFavoriteValue);
   return (
@@ -20,7 +16,6 @@ export default function FavoriteBtn() {
         {/* suppressHydrationWarning：消除水合报警 */}
         {/* <div suppressHydrationWarning>当前页面是服务端预渲染嘛？{hasFagoted ? "Yes" : "Noe"}</div> */}
       </Button>
-      <div>当前页面是服务端预渲染嘛？{hasFagoted ? "Yes" : "Noe"}</div>
     </div>
   );
 }
